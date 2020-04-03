@@ -2,10 +2,11 @@ package eg.edu.alexu.csd.datastructure.stack.cs;
 import java.util.Scanner;
 public class UI {
 
-	@SuppressWarnings("resource")
-	public static void main(String[] args) {
-		LinkedListedStack stack = new LinkedListedStack();
-		while(true) {
+@SuppressWarnings("resource")
+public static void main(String[] args) {
+	LinkedListedStack stack = new LinkedListedStack();
+	while(true) {			
+		try {
 			System.out.println("1: Push\n2: Pop\n3: Peek\n4: Get size\n5: Check if empty");
 			Scanner y = new Scanner(System.in);
 			int x = y.nextInt();
@@ -39,6 +40,10 @@ public class UI {
 				System.out.println();
 			}
 		}
+		catch (Exception e) {
+			e.getMessage();
+		}
+	}
 		
 	}
 
